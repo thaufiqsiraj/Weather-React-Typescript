@@ -1,50 +1,106 @@
-# React + TypeScript + Vite
+# Weather App 🌤️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern weather app built using **React**, **TypeScript**, **Bun**, and **Vite**. This app allows users to search for
+weather information for any city worldwide, offering detailed insights with an intuitive and vibrant user interface.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+### 🌍 Global Weather Search
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Search for any city across the globe.
+- Get instant results with real-time weather data.
 
-- Configure the top-level `parserOptions` property like this:
+### 🔍 Smart Auto-Suggestions
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ["./tsconfig.node.json", "./tsconfig.app.json"],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-});
-```
+- As you type, the app provides a dropdown with location suggestions to speed up the search process.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 📊 Comprehensive Weather Details
 
-```js
-// eslint.config.js
-import react from "eslint-plugin-react";
+The app displays:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: "18.3" } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs["jsx-runtime"].rules,
-  },
-});
-```
+- **Temperature**: Current, high, and low.
+- **Wind**: Speed, direction, and gusts.
+- **Feels Like**: Perceived temperature for better context.
+- **Humidity**: Atmospheric moisture levels.
+- **Precipitation**: Probability and intensity of rain or snow.
+- **Visibility**: Distance you can see clearly.
+- **Pressure**: Atmospheric pressure in hPa.
+
+### 🎨 Stunning UI
+
+- Gradient background and clean card-based layout for effortless readability.
+- Responsive design for a seamless experience across devices.
+
+---
+
+## Tech Stack
+
+### Frameworks and Tools
+
+- **React**: For building a dynamic and reusable component-based UI.
+- **TypeScript**: For static type-checking and improved code quality.
+- **Bun**: For a fast JavaScript runtime and modern package manager.
+- **Vite**: For a blazing-fast development environment and optimized builds.
+
+### APIs
+
+- [OpenWeatherMap API](https://openweathermap.org/api): Fetching accurate and up-to-date weather data.
+
+---
+
+## Installation
+
+Follow these steps to get the app up and running locally:
+
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/thaufiqsiraj/Weather-React-Typescript
+   cd Weather-React-Typescript
+   ```
+
+2. **Install dependencies** using Bun:
+   ```bash
+   bun install
+   ```
+
+3. **Set up the environment**:  
+   Create a `.env` file in the root directory and add your OpenWeatherMap API key:
+   ```env
+   VITE_WEATHER_API_KEY=your_api_key
+   ```
+
+4. **Start the development server**:
+   ```bash
+   bun run dev
+   ```
+
+---
+
+## Usage
+
+1. **Search for a city**: Type in the search bar, and select a location from the auto-suggestions dropdown.
+2. **View weather details**: The app will display detailed weather metrics for the selected city.
+
+---
+
+## Screenshots
+
+### Main Interface
+
+![Weather App Screenshot](./src/assets/London%20Weather.jpeg)
+
+---
+
+## Future Enhancements
+
+- Integrate dark mode for better usability in low-light conditions.
+
+---
+
+## Feedback
+
+Feel free to open issues or contribute via pull requests. Your suggestions are always welcome!
+
+---
